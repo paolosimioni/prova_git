@@ -11,3 +11,7 @@ if (vettore_phicontactdrain_parte2(kk_parte2)==Vd_parte2)
 
 concentrazione_superficiale_trappole_don=1e16; % in m^(-2)
 concentrazione_trappole_don=concentrazione_superficiale_trappole_don/spessore_trappole; % in m^(-3)
+concentrazione_superficiale_trappole_don=1e16; % in m^(-2)
+concentrazione_trappole_don=concentrazione_superficiale_trappole_don/spessore_trappole; % in m^(-3)
+concentrazione_superficiale_trappole_don=1e16; % in m^(-2)
+concentrazione_trappole_don=concentrazione_superficiale_trappole_don/spessore_trappole; % in m^(-3)
