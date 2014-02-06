@@ -1,3 +1,6 @@
+Dn=Vth*muel;
+Dp=Vth*mulac;
+
 spessore_trappole=spessore_organico/5; %(4 punti di mesh in z)
 
 nodi_trappole=find(semicond.p(3,:)>=spessore_ossido+(spessore_organico-spessore_trappole) & semicond.p(3,:)<=spessore_ossido+spessore_organico);
