@@ -21,3 +21,6 @@ save -binary SLV_trans_Vgs14.25V_Vds100V_vettoriale_staz_parte2_coeff_barriera_2
 if (vettore_phicontactdrain_parte2(kk_parte2)==Vd_parte2)
       break
 endif
+if (vettore_phicontactdrain_parte2(kk_parte2)==Vd_parte2)
+      break
+endif
