@@ -46,3 +46,11 @@ plot(vettore_phicontactdrain_grafico,vettore_I_uscente_drain_grafico,"-*")
 xlabel("Vds in V");
 ylabel("Corrente uscente di drain in A");
 title("Caratteristica per Vgs=10V");
+
+% Assegnazione della polarizzazione d'interesse
+Vd1=1;
+Vd=20;
+Vg=10;
+Vd_parte2=0;
+% Fine dell'assegnazione della polarizzazione d'interesse
+
