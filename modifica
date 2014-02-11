@@ -1,3 +1,8 @@
+% Assegnazione del campo magnetico: esso è nullo
+B=zeros(3,columns(semicond.t));
+% Fine dell'assegnazione del campo magnetico: esso è nullo
+
+
    % Tensore di mobilità Hall per gli elettroni
 mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;
 mob_Hall_ele_x=mob_Hall_ele;
