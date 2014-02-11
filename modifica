@@ -22,3 +22,14 @@ t=t+delta_t;
 
 phicontactgate=coefficiente_Vg*(t-vettore_t(kk_finale_Vd1));
 
+
+% Generazione della matrice di permettività
+matrice_epsilon=zeros(3,3,columns(dispositivo.t));
+matrice_epsilon(1,1,:)=epsilon_ossido_x;
+matrice_epsilon(2,2,:)=epsilon_ossido_y;
+matrice_epsilon(3,3,:)=epsilon_ossido_z;
+matrice_epsilon(1,1,elemsemicond)=epsilon_semiconduttore_x;
+matrice_epsilon(2,2,elemsemicond)=epsilon_semiconduttore_y;
+matrice_epsilon(3,3,elemsemicond)=epsilon_semiconduttore_z;
+% Fine della generazione della matrice di permettività
+
