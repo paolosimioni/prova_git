@@ -1,5 +1,5 @@
    % Tensore di mobilità Hall per gli elettroni
-mob_Hall_ele=r*muel;
+mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;
 mob_Hall_ele_x=mob_Hall_ele;
 mob_Hall_ele_y=mob_Hall_ele;
 mob_Hall_ele_z=mob_Hall_ele;
