@@ -11,3 +11,14 @@ mob_Hall_lac_x=mob_Hall_lac;
 mob_Hall_lac_y=mob_Hall_lac;
 mob_Hall_lac_z=mob_Hall_lac;
 
+
+kk_finale_Vd1=length(vettore_t);
+kk_iniziale_Vg=length(vettore_t)+1;
+kk=kk_iniziale_Vg;
+delta_t=0.1/delta_Vg;
+
+
+t=t+delta_t;
+
+phicontactgate=coefficiente_Vg*(t-vettore_t(kk_finale_Vd1));
+
