@@ -41,3 +41,8 @@ save -binary SLV_mob6_Vgs10V_Vds0V_vettoriale_staz_car_parte2_coeff_barriera_2.7
                                  vettore_I_ele_uscente_source_parte2 vettore_I_lac_uscente_source_parte2 \
                                  vettore_I_uscente_source_parte2 vettore_I_ele_uscente_drain_parte2 vettore_I_lac_uscente_drain_parte2 vettore_I_uscente_drain_parte2
 
+
+plot(vettore_phicontactdrain_grafico,vettore_I_uscente_drain_grafico,"-*")
+xlabel("Vds in V");
+ylabel("Corrente uscente di drain in A");
+title("Caratteristica per Vgs=10V");
