@@ -1,0 +1,66 @@
+% Assegnazione del campo magnetico: esso è nullo
+B=zeros(3,columns(semicond.t));
+% Fine dell'assegnazione del campo magnetico: esso è nullo
+
+
+   % Tensore di mobilità Hall per gli elettroni
+mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;mob_Hall_ele=r*muel;
+mob_Hall_ele_x=mob_Hall_ele;
+mob_Hall_ele_y=mob_Hall_ele;
+mob_Hall_ele_z=mob_Hall_ele;
+   
+
+   % Tensore di mobilità Hall per le lacune
+mob_Hall_lac=r*mulac;
+mob_Hall_lac_x=mob_Hall_lac;
+mob_Hall_lac_y=mob_Hall_lac;
+mob_Hall_lac_z=mob_Hall_lac;
+
+
+kk_finale_Vd1=length(vettore_t);
+kk_iniziale_Vg=length(vettore_t)+1;
+kk=kk_iniziale_Vg;
+delta_t=0.1/delta_Vg;
+
+
+t=t+delta_t;
+
+phicontactgate=coefficiente_Vg*(t-vettore_t(kk_finale_Vd1));
+
+
+% Generazione della matrice di permettività
+matrice_epsilon=zeros(3,3,columns(dispositivo.t));
+matrice_epsilon(1,1,:)=epsilon_ossido_x;
+matrice_epsilon(2,2,:)=epsilon_ossido_y;
+matrice_epsilon(3,3,:)=epsilon_ossido_z;
+matrice_epsilon(1,1,elemsemicond)=epsilon_semiconduttore_x;
+matrice_epsilon(2,2,elemsemicond)=epsilon_semiconduttore_y;
+matrice_epsilon(3,3,elemsemicond)=epsilon_semiconduttore_z;
+% Fine della generazione della matrice di permettività
+
+
+save -binary SLV_mob6_Vgs10V_Vds0V_vettoriale_staz_car_parte2_coeff_barriera_2.7e-4_AFNele_4e5q_BFNele_10_AFNlac_0_BFNlac_10_simm_senza_trap_ecc  \
+                                 vettore_t_parte2 vettore_phicontactdrain_parte2 vettore_phicontactgate_parte2 vettore_num_iter_Gummel_tempo_parte2 \
+                                 matrice_phi_parte2 matrice_fn_parte2 matrice_fp_parte2 matrice_n_parte2 matrice_p_parte2 matrice_ele_trap_tempo_parte2 matrice_lac_trap_tempo_parte2 \
+                                 matrice_sing_disacc_lin_parte2 matrice_tripl_disacc_lin_parte2 matrice_sing_parte2 matrice_tripl_parte2 \
+                                 vettore_I_ele_uscente_source_parte2 vettore_I_lac_uscente_source_parte2 \
+                                 vettore_I_uscente_source_parte2 vettore_I_ele_uscente_drain_parte2 vettore_I_lac_uscente_drain_parte2 vettore_I_uscente_drain_parte2
+
+
+plot(vettore_phicontactdrain_grafico,vettore_I_uscente_drain_grafico,"-*")
+xlabel("Vds in V");
+ylabel("Corrente uscente di drain in A");
+title("Caratteristica per Vgs=10V");
+
+% Assegnazione della polarizzazione d'interesse
+Vd1=1;
+Vd=20;
+Vg=10;
+Vd_parte2=0;
+% Fine dell'assegnazione della polarizzazione d'interesse
+
+
+%%%%%%%%%%%%%%%%%
+% Configuration %
+%%%%%%%%%%%%%%%%%
+
